@@ -6,6 +6,10 @@ namespace ThirdCoreWebApplication
         {
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
+            string resultString = "default very interesting string";
+
+            ConfigurationManager configuration = builder.Configuration;
+            resultString = configuration["AVeryImportantKey"];
 
             if (app.Environment.IsDevelopment())
             {
@@ -18,8 +22,7 @@ namespace ThirdCoreWebApplication
                 Console.WriteLine("fuckkkkkk");
             }
 
-            app.MapGet("/", () => "Worker process name : " + 
-            System.Diagnostics.Process.GetCurrentProcess().ProcessName);
+            app.MapGet("/", () => resultString);
             app.MapGet("/potato", () => "i hate myself lol");
 
             app.Run();
