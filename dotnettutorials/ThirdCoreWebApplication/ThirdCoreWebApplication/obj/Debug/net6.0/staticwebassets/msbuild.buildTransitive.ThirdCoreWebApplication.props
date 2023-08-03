@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ThirdCoreWebApplication.props" />
+</Project>
