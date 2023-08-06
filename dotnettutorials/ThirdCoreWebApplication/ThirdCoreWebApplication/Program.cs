@@ -14,7 +14,27 @@ namespace ThirdCoreWebApplication
             if (app.Environment.IsDevelopment())
             {
                 Console.WriteLine("im gay");
+                app.UseDeveloperExceptionPage();
             }
+
+            app.UseRouting();
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync(resultString);
+            //    });
+            //    endpoints.MapGet("/potato", async context =>
+            //    {
+            //        await context.Response.WriteAsync("potatopotatopotatopotato");
+            //    });
+            //    endpoints.Map("/imdying", async context =>
+            //    {
+            //        Console.WriteLine("im literally dying rn");
+            //        await context.Response.WriteAsync("as you can see from the console, i am dying rn");
+            //    });
+            //});
 
             if (Environment.GetEnvironmentVariable("POTATO_EXISTS") == "PotatoExists")
             {
@@ -22,8 +42,13 @@ namespace ThirdCoreWebApplication
                 Console.WriteLine("fuckkkkkk");
             }
 
-            app.MapGet("/", () => resultString);
-            app.MapGet("/potato", () => "i hate myself lol");
+            //app.MapGet("/", () => resultString);
+            //app.MapGet("/potato", () => "i hate myself lol");
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Here is the response from the first middleware");
+            });
 
             app.Run();
         }
