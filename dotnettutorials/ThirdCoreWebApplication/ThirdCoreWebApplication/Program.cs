@@ -45,9 +45,15 @@ namespace ThirdCoreWebApplication
             //app.MapGet("/", () => resultString);
             //app.MapGet("/potato", () => "i hate myself lol");
 
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Here is the response from the first middleware!\n");
+                await next();
+            });
+
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Here is the response from the first middleware");
+                await context.Response.WriteAsync("Here is the response from the second middleware");
             });
 
             app.Run();
