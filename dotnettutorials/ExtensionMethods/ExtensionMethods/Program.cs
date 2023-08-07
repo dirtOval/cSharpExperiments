@@ -10,7 +10,10 @@
             obj.Test3();
             obj.Test4(100);
             obj.Test5();
-            Console.ReadLine();
+            Console.WriteLine("What is your favorite saying?");
+            string favoriteSaying = Console.ReadLine();
+            int wordCount = favoriteSaying.GetWordCount();
+            Console.WriteLine($"Your favorite saying has {wordCount} words!");
         }
     }
 }
