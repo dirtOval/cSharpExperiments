@@ -45,17 +45,34 @@ namespace ThirdCoreWebApplication
             //app.MapGet("/", () => resultString);
             //app.MapGet("/potato", () => "i hate myself lol");
 
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Here is the response from the first middleware!\n");
+            //    await next();
+            //});
+
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Here is the response from the second middleware");
+            //});
+
+            //app.Run();
             app.Use(async (context, next) =>
             {
-                await context.Response.WriteAsync("Here is the response from the first middleware!\n");
+                await context.Response.WriteAsync("Omg its middlware 1 incoming\n");
                 await next();
+                await context.Response.WriteAsync("omfg its middleware 1 outgoing!\n");
             });
-
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("omgomgomgomg its middlware 2 incoming!\n");
+                await next();
+                await context.Response.WriteAsync("lmao its mmiddlware 2 outgoing!\n");
+            });
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Here is the response from the second middleware");
+                await context.Response.WriteAsync("Middleware 3 babyyy, handled, response generated!\n");
             });
-
             app.Run();
         }
     }
