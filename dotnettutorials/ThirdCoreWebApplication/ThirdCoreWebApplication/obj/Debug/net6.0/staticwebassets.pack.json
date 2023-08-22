@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\deird\\Desktop\\projects\\cSharpExperiments\\dotnettutorials\\ThirdCoreWebApplication\\ThirdCoreWebApplication\\wwwroot\\js\\potatoScript.js",
+      "PackagePath": "staticwebassets\\js\\potatoScript.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ThirdCoreWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ThirdCoreWebApplication.props",
+      "PackagePath": "build\\ThirdCoreWebApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ThirdCoreWebApplication.props",
+      "PackagePath": "buildMultiTargeting\\ThirdCoreWebApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ThirdCoreWebApplication.props",
+      "PackagePath": "buildTransitive\\ThirdCoreWebApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

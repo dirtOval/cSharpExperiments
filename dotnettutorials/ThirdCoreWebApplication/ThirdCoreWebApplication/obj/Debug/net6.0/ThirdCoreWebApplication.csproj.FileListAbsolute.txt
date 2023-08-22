@@ -24,3 +24,4 @@ C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\ThirdCoreWebAp
 C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\ThirdCoreWebApplication\ThirdCoreWebApplication\obj\Debug\net6.0\ThirdCoreWebApplication.pdb
 C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\ThirdCoreWebApplication\ThirdCoreWebApplication\obj\Debug\net6.0\ThirdCoreWebApplication.genruntimeconfig.cache
 C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\ThirdCoreWebApplication\ThirdCoreWebApplication\obj\Debug\net6.0\ref\ThirdCoreWebApplication.dll
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\ThirdCoreWebApplication\ThirdCoreWebApplication\bin\Debug\net6.0\ThirdCoreWebApplication.staticwebassets.runtime.json

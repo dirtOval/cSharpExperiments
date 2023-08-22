@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "ItZ0admeoTcAbduPk4+U1qNifS5pIUh41aoKmTaLZP4=",
+  "Hash": "GPhVsRpTi0o1DDellGU/ICOFhvFFMgvSGdXWIZXUt4A=",
   "Source": "ThirdCoreWebApplication",
   "BasePath": "_content/ThirdCoreWebApplication",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ThirdCoreWebApplication\\wwwroot",
+      "Source": "ThirdCoreWebApplication",
+      "ContentRoot": "C:\\Users\\deird\\Desktop\\projects\\cSharpExperiments\\dotnettutorials\\ThirdCoreWebApplication\\ThirdCoreWebApplication\\wwwroot\\",
+      "BasePath": "_content/ThirdCoreWebApplication",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\deird\\Desktop\\projects\\cSharpExperiments\\dotnettutorials\\ThirdCoreWebApplication\\ThirdCoreWebApplication\\wwwroot\\js\\potatoScript.js",
+      "SourceId": "ThirdCoreWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deird\\Desktop\\projects\\cSharpExperiments\\dotnettutorials\\ThirdCoreWebApplication\\ThirdCoreWebApplication\\wwwroot\\",
+      "BasePath": "_content/ThirdCoreWebApplication",
+      "RelativePath": "js/potatoScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\potatoScript.js"
+    }
+  ]
 }

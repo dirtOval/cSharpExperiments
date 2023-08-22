@@ -4,7 +4,13 @@ namespace ThirdCoreWebApplication
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationOptions webApplicationOptions = new WebApplicationOptions
+            {
+                WebRootPath = "exclusivewebrootforcoolkidsonly",
+                Args = args,
+                EnvironmentName = "Production",
+            };
+            var builder = WebApplication.CreateBuilder(webApplicationOptions);
             var app = builder.Build();
             string resultString = "default very interesting string";
 
@@ -18,6 +24,12 @@ namespace ThirdCoreWebApplication
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
+            app.MapGet("/", () => $"EnvironmentName: {app.Environment.EnvironmentName}\n" +
+              $"ApplicationName: {app.Environment.ApplicationName}\n" +
+              $"WebRootPath: {app.Environment.WebRootPath}\n" +
+              $"ContentRootPath: {app.Environment.ContentRootPath}");
+            app.Run();
 
             //app.UseEndpoints(endpoints =>
             //{
@@ -57,23 +69,23 @@ namespace ThirdCoreWebApplication
             //});
 
             //app.Run();
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Omg its middlware 1 incoming\n");
-                await next();
-                await context.Response.WriteAsync("omfg its middleware 1 outgoing!\n");
-            });
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("omgomgomgomg its middlware 2 incoming!\n");
-                await next();
-                await context.Response.WriteAsync("lmao its mmiddlware 2 outgoing!\n");
-            });
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Middleware 3 babyyy, handled, response generated!\n");
-            });
-            app.Run();
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Omg its middlware 1 incoming\n");
+            //    await next();
+            //    await context.Response.WriteAsync("omfg its middleware 1 outgoing!\n");
+            //});
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("omgomgomgomg its middlware 2 incoming!\n");
+            //    await next();
+            //    await context.Response.WriteAsync("lmao its mmiddlware 2 outgoing!\n");
+            //});
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware 3 babyyy, handled, response generated!\n");
+            //});
+            //app.Run();
         }
     }
 }
