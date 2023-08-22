@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="exclusivewebrootforcoolkidsonly\css\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
