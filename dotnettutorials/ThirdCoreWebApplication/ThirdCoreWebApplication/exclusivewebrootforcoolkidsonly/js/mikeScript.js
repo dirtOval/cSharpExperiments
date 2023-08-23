@@ -4,35 +4,55 @@ $(document).ready(function () {
     const $mike = $('#mike');
     const $button = $('#consent-button');
     const $chaosMode = $('#chaos-mode');
+    const chaosArr = [];
+    let mewCounter = 0;
+    let mikeHeight = 400;
+    let fontSize = 10;
+    let meowActivated = false;
 
     const chaos = () => {
+        console.log(`Meow Levels At: ${mewCounter} and rising!`);
         setTimeout(() => {
-            $mike.attr('width', $mike.attr('width') + 5);
-            $mike.attr('height', $mike.attr('height') + 5);
-            $('p').attr('font-size', $('p').attr('font-size') + 5);
-            $('body').append('<audio autoplay src="audio/meow.mp3"/>');
-            $('audio').play();
+            $('body').append('<p>MEOW MEOW MEOW MEOW MEOW</p>');
+            mikeHeight += 5;
+            fontSize += 1;
+            $mike.width(mikeHeight);
+            $('p').css('font-size', (fontSize + 1).toString() + 'px');
+            mewCounter++;
+            let audio = '<audio id="' + mewCounter + '" src="audio/meow.mp3"/>';
+            $('body').append(audio);
+            //$('#' + mewCounter)[0].play();
+            for (let i = 1; i <= mewCounter; i++) {
+                let mew = document.getElementById(i);
+                if (mew.paused) {
+                    mew.play();
+                }
+            }
             chaos();
-        }, 1000);
+        }, 500);
     }
     
     $button.on('click', (e) => {
         console.log('meow activated');
         $('body').prepend('<h2>meow has been activated!!!!!</h2');
+        mewActivated = true;
         $button.remove();
     });
-    $chaosMode.on('click', e => {
+$chaosMode.on('click', e => {
+    meowActivated = true;
         $button.remove();
         $chaosMode.remove();
         alert('you fucked up, pal.');
         chaos();
     });
-    $mike.on('mouseenter', (e) => {
+$mike.on('mouseenter', (e) => {
+    if (meowActivated) {
         if (meow.paused) {
             meow.play();
         } else {
             meow.currentTime = 0;
         }
         $('body').append('<p>MEOW MEOW MEOW MEOW MEOW</p>');
+    }
     });
 });

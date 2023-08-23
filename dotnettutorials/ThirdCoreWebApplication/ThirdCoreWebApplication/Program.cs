@@ -23,12 +23,13 @@ namespace ThirdCoreWebApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            //app.UseRouting();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.MapGet("/", () => $"EnvironmentName: {app.Environment.EnvironmentName}\n" +
-              $"ApplicationName: {app.Environment.ApplicationName}\n" +
-              $"WebRootPath: {app.Environment.WebRootPath}\n" +
-              $"ContentRootPath: {app.Environment.ContentRootPath}");
+            //app.MapGet("/", () => $"EnvironmentName: {app.Environment.EnvironmentName}\n" +
+            //  $"ApplicationName: {app.Environment.ApplicationName}\n" +
+            //  $"WebRootPath: {app.Environment.WebRootPath}\n" +
+            //  $"ContentRootPath: {app.Environment.ContentRootPath}");
             app.Run();
 
             //app.UseEndpoints(endpoints =>
