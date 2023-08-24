@@ -31,10 +31,14 @@ namespace ThirdCoreWebApplication
             //app.UseDefaultFiles(defaultFilesOptions);
             //app.UseStaticFiles();
 
-            FileServerOptions fileServerOptions = new FileServerOptions();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("itsSquidward.html");
-            app.UseFileServer(fileServerOptions);
+            app.UseDirectoryBrowser();
+
+            app.UseStaticFiles();
+
+            //FileServerOptions fileServerOptions = new FileServerOptions();
+            //fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
+            //fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("itsSquidward.html");
+            //app.UseFileServer(fileServerOptions);
 
             //app.MapGet("/", () => $"EnvironmentName: {app.Environment.EnvironmentName}\n" +
             //  $"ApplicationName: {app.Environment.ApplicationName}\n" +
