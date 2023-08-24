@@ -1,0 +1,15 @@
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\bin\Debug\net7.0\TimeForAnotherApp.exe
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\bin\Debug\net7.0\TimeForAnotherApp.deps.json
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\bin\Debug\net7.0\TimeForAnotherApp.runtimeconfig.json
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\bin\Debug\net7.0\TimeForAnotherApp.dll
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\bin\Debug\net7.0\TimeForAnotherApp.pdb
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.csproj.AssemblyReference.cache
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.AssemblyInfoInputs.cache
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.AssemblyInfo.cs
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.csproj.CoreCompileInputs.cache
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.dll
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\refint\TimeForAnotherApp.dll
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.pdb
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\TimeForAnotherApp.genruntimeconfig.cache
+C:\Users\deird\Desktop\projects\cSharpExperiments\dotnettutorials\TimeForAnotherApp\obj\Debug\net7.0\ref\TimeForAnotherApp.dll
