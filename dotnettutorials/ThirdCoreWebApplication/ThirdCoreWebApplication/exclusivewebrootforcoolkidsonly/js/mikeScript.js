@@ -8,7 +8,7 @@ $(document).ready(function () {
     let mewCounter = 0;
     let mikeHeight = 400;
     let fontSize = 10;
-    let meowActivated = false;
+    let mewActivated = false;
 
     const chaos = () => {
         console.log(`Meow Levels At: ${mewCounter} and rising!`);
@@ -21,15 +21,19 @@ $(document).ready(function () {
             mewCounter++;
             let audio = '<audio id="' + mewCounter + '" src="audio/meow.mp3"/>';
             $('body').append(audio);
-            //$('#' + mewCounter)[0].play();
-            for (let i = 1; i <= mewCounter; i++) {
-                let mew = document.getElementById(i);
-                if (mew.paused) {
-                    mew.play();
-                }
-            }
+            let mew = document.getElementById(mewCounter);
+            mew.play();
+            mew.addEventListener('ended', e => {
+                mew.play();
+            })
+            //for (let i = 1; i <= mewCounter; i++) {
+            //    let mew = document.getElementById(i);
+            //    if (mew.paused) {
+            //        mew.play();
+            //    }
+            //}
             chaos();
-        }, 500);
+        }, 400);
     }
     
     $button.on('click', (e) => {
@@ -46,7 +50,7 @@ $chaosMode.on('click', e => {
         chaos();
     });
 $mike.on('mouseenter', (e) => {
-    if (meowActivated) {
+    if (mewActivated) {
         if (meow.paused) {
             meow.play();
         } else {

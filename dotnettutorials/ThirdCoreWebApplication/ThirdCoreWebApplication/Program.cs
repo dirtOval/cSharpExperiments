@@ -24,8 +24,18 @@ namespace ThirdCoreWebApplication
             }
 
             //app.UseRouting();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+
+            //DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            //defaultFilesOptions.DefaultFileNames.Clear();
+            //defaultFilesOptions.DefaultFileNames.Add("itsSquidward.html");
+            //app.UseDefaultFiles(defaultFilesOptions);
+            //app.UseStaticFiles();
+
+            FileServerOptions fileServerOptions = new FileServerOptions();
+            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
+            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("itsSquidward.html");
+            app.UseFileServer(fileServerOptions);
+
             //app.MapGet("/", () => $"EnvironmentName: {app.Environment.EnvironmentName}\n" +
             //  $"ApplicationName: {app.Environment.ApplicationName}\n" +
             //  $"WebRootPath: {app.Environment.WebRootPath}\n" +
