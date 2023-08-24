@@ -8,7 +8,7 @@ namespace ThirdCoreWebApplication
             {
                 WebRootPath = "exclusivewebrootforcoolkidsonly",
                 Args = args,
-                EnvironmentName = "Production",
+                EnvironmentName = "Development",
             };
             var builder = WebApplication.CreateBuilder(webApplicationOptions);
             var app = builder.Build();
@@ -19,8 +19,12 @@ namespace ThirdCoreWebApplication
 
             if (app.Environment.IsDevelopment())
             {
+                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions
+                {
+                    SourceCodeLineCount = 7
+                };
                 Console.WriteLine("im gay");
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
             }
 
             //app.UseRouting();
@@ -44,6 +48,10 @@ namespace ThirdCoreWebApplication
             //  $"ApplicationName: {app.Environment.ApplicationName}\n" +
             //  $"WebRootPath: {app.Environment.WebRootPath}\n" +
             //  $"ContentRootPath: {app.Environment.ContentRootPath}");
+
+            int num1 = 69;
+            int num2 = 0;
+            app.MapGet("/error", () => num1 / num2);
             app.Run();
 
             //app.UseEndpoints(endpoints =>
